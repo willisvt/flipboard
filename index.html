@@ -17,8 +17,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
     <script>
-        const supabaseUrl = 'YOUR_SUPABASE_URL';
-        const supabaseKey = 'YOUR_SUPABASE_PUBLIC_KEY';
+        const supabaseUrl = 'https://hzwivurcqwxspaqtqkop.supabase.co';
+        const supabaseKey = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imh6d2l2dXJjcXd4c3BhcXRxa29wIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDY5MjM4MTAsImV4cCI6MjAyMjQ5OTgxMH0.iZ6oGXU9slGfIT6CVct_V2o95CFBssT3hZftsLf5pR8';
         const supabase = window.supabase.createClient(supabaseUrl, supabaseKey);
 
         document.getElementById('dataForm').addEventListener('submit', async (event) => {
@@ -29,7 +29,7 @@
             const email = formData.get('email');
 
             // Send data to Superbase
-            const { data, error } = await supabase.from('your_table_name').insert([
+            const { data, error } = await supabase.from('messages').insert([
                 { name, email }
             ]);
 
